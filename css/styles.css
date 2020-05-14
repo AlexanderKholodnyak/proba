@@ -1,39 +1,40 @@
-pre {
-  font-family: "Arial", "Helvetica", sans-serif;
-  color: #2a2a2a;
-  font-size: 16px;
+html {
+  box-sizing: border-box;
 }
 
-pre::first-letter {
-  font-family: "Tahoma", serif;
-  font-size: 32px;
-  color: #f44336;
-}
-pre::selection {
-  color: #ffffff;
-  background-color: #3f51b5;
-}
-/* Задаём родителю ширину и высоту. Делаем его квадратом. */
-.thumbnail {
-  width: 250px;
-  height: 250px;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
-.thumbnail > img {
-  /* 
-    Устанавливаем ширину и высоту картинки по размеру родителя.
-    ✅ Элемент img становится квадратным 
-    ⚠️ Изображение искажается 
-  */
-  width: 100%;
-  height: 100%;
+/* Остальной код */
+.container {
+  display: flex;
 
-  /*  Говорим элементу img подстроить изображение под свои текущие размеры  */
-  object-fit: cover;
+  width: 750px;
+  padding: 30px;
 
-  /*  
-  Задаём элементу img радиус рамки 50%. 
-  ✅ Рамка прозрачная, но видимую часть изображения обрезает   
-  */
-  border-radius: 50%;
+  background-color: #455a64;
+}
+
+.element {
+  width: 150px;
+  height: 150px;
+
+  font-size: 24px;
+  text-align: center;
+  line-height: 150px;
+}
+
+.pink {
+  background-color: #e91e63;
+}
+
+.blue {
+  background-color: #2196f3;
+}
+
+.amber {
+  background-color: #ffc107;
 }
